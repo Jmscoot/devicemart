@@ -1,0 +1,38 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\1002s\esp_32\iot\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/1002s/esp_32/iot/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/iot.c.obj
+C:/Users/1002s/esp_32/iot/main/iot.c: In function 'sd_read_task':
+C:/Users/1002s/esp_32/iot/main/iot.c:396:14: warning: unused variable 'has_more_files' [-Wunused-variable]
+  396 |         bool has_more_files = false;
+      |              ^~~~~~~~~~~~~~
+C:/Users/1002s/esp_32/iot/main/iot.c:333:8: warning: unused variable 'filename' [-Wunused-variable]
+  333 |   char filename[100];
+      |        ^~~~~~~~
+C:/Users/1002s/esp_32/iot/main/iot.c: In function 'sd_read_file':
+C:/Users/1002s/esp_32/iot/main/iot.c:493:12: warning: unused variable 'delay_ms' [-Wunused-variable]
+  493 |   uint32_t delay_ms;
+      |            ^~~~~~~~
+C:/Users/1002s/esp_32/iot/main/iot.c: In function 'file_polling_task':
+C:/Users/1002s/esp_32/iot/main/iot.c:730:21: warning: unused variable 'current_bits' [-Wunused-variable]
+  730 |         EventBits_t current_bits = xEventGroupGetBits(sd_write_group);
+      |                     ^~~~~~~~~~~~
+C:/Users/1002s/esp_32/iot/main/iot.c: At top level:
+C:/Users/1002s/esp_32/iot/main/iot.c:96:13: warning: 'read_save_sync' defined but not used [-Wunused-variable]
+   96 | static bool read_save_sync = false;
+      |             ^~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable iot.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.9.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/1002s/esp_32/iot/build/iot.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\1002s\esp_32\iot\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/1002s/esp_32/iot/build/partition_table/partition-table.bin C:/Users/1002s/esp_32/iot/build/iot.bin"
+iot.bin binary size 0xfa570 bytes. Smallest app partition is 0x100000 bytes. 0x5a90 bytes (2%) free.
+Warning: The smallest app partition is nearly full (2% free space left)!
